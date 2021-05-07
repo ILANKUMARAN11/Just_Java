@@ -1,0 +1,26 @@
+package com.ilan;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MultiInputString {
+
+	public static void main(String[] args) {
+
+		MultiInputString m = new MultiInputString();
+
+		System.out.println(">>>>>" + m.alpha("One", "Two"));
+
+		String arr[] = { "Three", "Four" };
+
+		System.out.println(">>>>>" + m.alpha(arr));
+
+	}
+
+	public List<String> alpha(String... input) {
+		String arr[] = input;
+		return Arrays.stream(arr).collect(Collectors.toList());
+	}
+
+}

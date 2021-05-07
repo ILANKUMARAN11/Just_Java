@@ -1,0 +1,26 @@
+package com.ilan;
+
+import java.util.Arrays;
+
+
+public class MultiInputString {
+
+	public static void main(String[] args) {
+
+		System.out.println(alpha("One", "Two"));
+		
+		String arr[]={"Three", "Four"};
+
+		System.out.println(alpha(arr));
+
+	}
+
+	public String alpha(String... input) {
+		String arr[] = input;
+		String all = "";
+		return Arrays.stream(arr).map(e -> all.concat(" ; " + e))
+		.peek(System.out::println)
+		.findFirst().get();
+	}
+
+}

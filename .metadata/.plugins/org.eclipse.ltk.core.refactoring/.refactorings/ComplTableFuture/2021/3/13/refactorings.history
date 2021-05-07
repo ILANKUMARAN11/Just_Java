@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.ilan&apos; to &apos;Method_Reference/src&apos;&#x0A;- Original project: &apos;ComplTableFuture&apos;&#x0A;- Destination element: &apos;Method_Reference/src&apos;&#x0A;- Original element: &apos;ComplTableFuture/src/com.ilan&apos;" description="Copy package" destination="=Method_Reference/src" element1="/src&lt;com.ilan" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1616648078973" version="1.0"/>
+</session>

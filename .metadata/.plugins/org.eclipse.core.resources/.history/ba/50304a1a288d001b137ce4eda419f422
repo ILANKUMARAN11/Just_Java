@@ -1,0 +1,10 @@
+package com.ilan;
+
+public class Static_method_Reference {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

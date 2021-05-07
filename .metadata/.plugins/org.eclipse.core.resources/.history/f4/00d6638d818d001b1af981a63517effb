@@ -1,0 +1,15 @@
+package com.tcs.infy;
+
+import java.util.Optional;
+
+public class OptionalClass {
+
+	public static void main(String[] args) {
+		
+		String str="Test";
+		
+		Optional.ofNullable(str).orElse("Dummy");
+
+	}
+
+}
