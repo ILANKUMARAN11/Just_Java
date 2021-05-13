@@ -1,4 +1,4 @@
-package com.tcs.infy;
+package com.tcs.infy.lamda;
 
 import java.util.ArrayList;
 import java.util.Arrays;

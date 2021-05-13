@@ -1,4 +1,4 @@
-package com.tcs.infy;
+package com.tcs.infy.streams;
 
 import java.util.Arrays;
 import java.util.List;
