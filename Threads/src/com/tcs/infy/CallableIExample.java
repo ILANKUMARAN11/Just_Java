@@ -29,14 +29,15 @@ public class CallableIExample implements Callable<String>{
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		
 		
+		
+		//Run the Callable using Thread Class
 		Callable<String> callableExample=new CallableIExample("only callable");
 		FutureTask<String> futureTask1 = new FutureTask<String>(callableExample);
 		Thread t=new Thread(futureTask1);
 		t.start();
 		System.out.println(futureTask1.get());
 		
-		
-		//ExecutorService executorService=Executors.newSingleThreadExecutor();
+		//Run the Callable using ExecutorService Class
 		ExecutorService executorService=Executors.newFixedThreadPool(4);
 		List<Future<String>> lstfutureTask=new ArrayList<Future<String>>();
 		

@@ -36,6 +36,8 @@ public class TestThread extends Thread {
 
 		System.out.println("Execution time in milliseconds : " + 
 								timeElapsed / 1000000);
+		
+		Thread t=new Thread(()->{});
 	
 
 	}
