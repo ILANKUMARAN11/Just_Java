@@ -14,20 +14,20 @@ public class Count_Down_Latch {
   
         // Let us create four worker 
         // threads and start them.
-        WorkerThread first = new WorkerThread(1000, latch, 
+        DeveloperThread first = new DeveloperThread(1000, latch, 
                                   "WORKER-1");
-        WorkerThread second = new WorkerThread(2000, latch, 
+        DeveloperThread second = new DeveloperThread(2000, latch, 
                                   "WORKER-2");
-        WorkerThread third = new WorkerThread(3000, latch, 
+        DeveloperThread third = new DeveloperThread(3000, latch, 
                                   "WORKER-3");
-        WorkerThread fourth = new WorkerThread(4000, latch, 
+        DeveloperThread fourth = new DeveloperThread(4000, latch, 
                                   "WORKER-4");
         first.start();
         second.start();
         third.start();
         fourth.start();
         
-        ExternalThread ext=new ExternalThread(latch, "External_Thread");
+        QAThread ext=new QAThread(latch, "External_Thread");
         ext.start();
   
         // The main task waits for four threads

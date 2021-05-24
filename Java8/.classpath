@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="CompletableFuture/src"/>
-	<classpathentry kind="src" path="EffectivelyFinal/src"/>
-	<classpathentry kind="src" path="Java8_Streams/src"/>
-	<classpathentry kind="src" path="Method_Reference/src"/>
-	<classpathentry kind="output" path="CompletableFuture/bin"/>
-</classpath>

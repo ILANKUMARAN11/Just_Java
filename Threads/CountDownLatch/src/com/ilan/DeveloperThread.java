@@ -2,11 +2,11 @@ package com.ilan;
 
 import java.util.concurrent.CountDownLatch;
 
-class WorkerThread extends Thread {
+class DeveloperThread extends Thread {
 	private int delay;
 	private CountDownLatch latch;
 
-	public WorkerThread(int delay, CountDownLatch latch, String threadName) {
+	public DeveloperThread(int delay, CountDownLatch latch, String threadName) {
 		super(threadName);
 		this.delay = delay;
 		this.latch = latch;
@@ -15,9 +15,10 @@ class WorkerThread extends Thread {
 	@Override
 	public void run() {
 		try {
+			System.out.println("Task was started by "+Thread.currentThread().getName());
 			Thread.sleep(delay);
 			latch.countDown();
-			System.out.println(Thread.currentThread().getName() + " finished");
+			System.out.println("Developer "+Thread.currentThread().getName() + " finished the Task");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
