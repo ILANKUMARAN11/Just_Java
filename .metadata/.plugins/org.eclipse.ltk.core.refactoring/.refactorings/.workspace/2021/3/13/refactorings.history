@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/Algorithm" element2="/GeneriCBoundry" element3="/Java8" element4="/Threads" element5="/UriEncodingDecoding" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1616647586580"/>&#x0A;<refactoring comment="Delete resource &apos;ComplTableFuture&apos;" deleteContents="false" description="Delete resource &apos;ComplTableFuture&apos;" element1="/ComplTableFuture" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1616648564314"/>
-</session>
