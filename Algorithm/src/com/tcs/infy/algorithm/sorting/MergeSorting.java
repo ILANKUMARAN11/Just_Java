@@ -2,7 +2,7 @@ package com.tcs.infy.algorithm.sorting;
 
 public class MergeSorting {
 
-	public static void mergeSort(int[] a, int n) {
+	public static void mergeSort(int[] arr, int n) {
 
 		if (n < 2) {
 			return;
@@ -14,17 +14,17 @@ public class MergeSorting {
 		int r[] = new int[n - mid];
 
 		for (int i = 0; i < mid; i++) {
-			l[i] = a[i];
+			l[i] = arr[i];
 		}
 
 		for (int i = mid; i < n; i++) {
-			r[i - mid] = a[i];
+			r[i - mid] = arr[i];
 		}
 		
 		mergeSort(l, mid);
 		mergeSort(r, n - mid);
 
-		merge(a, l, r, mid, n - mid);
+		merge(arr, l, r, mid, n - mid);
 
 	}
 

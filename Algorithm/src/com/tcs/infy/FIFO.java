@@ -1,9 +1,11 @@
 package com.tcs.infy;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Queue;
-import java.util.Random;
 
 public class FIFO {
 	
@@ -30,13 +32,23 @@ public class FIFO {
 		queue_add(queue);
 		queue_print(queue);
 		
-		Random random = new Random();
-
+		List<String> l = new LinkedList();
+		l.add("Foo");
+		String ss[] = l.toArray(new String[l.size()]);
 		
-		for(int i =0; i<5; i++){
-		      int randomInteger = random.nextInt();
-		      System.out.println("Random Integer in Java: " + randomInteger);
-		 }
+		System.out.println(">>>"+ss[0]);
+		ListIterator<String> iter = l.listIterator();
+		while(iter.hasNext()){
+			System.out.println(iter.next());
+		    //String prev=iter.previous();
+		    if(true /*You condition here*/){
+		        iter.add("Bah");
+		        iter.add("Etc");
+		    }
+		}
+		
+		System.out.println(l);
+
 
 	}
 

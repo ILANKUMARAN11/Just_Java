@@ -38,7 +38,7 @@ public class CallableIExample implements Callable<String>{
 		System.out.println(futureTask1.get());
 		
 		//Run the Callable using ExecutorService Class
-		ExecutorService executorService=Executors.newFixedThreadPool(4);
+		ExecutorService executorService=Executors.newWorkStealingPool();
 		List<Future<String>> lstfutureTask=new ArrayList<Future<String>>();
 		
 		for(int i=0;i<70;i++) {

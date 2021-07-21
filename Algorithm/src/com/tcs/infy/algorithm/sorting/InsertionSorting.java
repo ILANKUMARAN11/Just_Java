@@ -24,7 +24,7 @@ public class InsertionSorting {
 		for (int lst2 : arr) {
 			System.out.print(lst2 + " ");
 		}
-
+		
 	}
 
 }
