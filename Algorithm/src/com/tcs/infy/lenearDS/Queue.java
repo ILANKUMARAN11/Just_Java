@@ -1,4 +1,4 @@
-package com.tcs.infy;
+package com.tcs.infy.lenearDS;
 
 class Queue {
 	private int arr[]; // array to store queue elements

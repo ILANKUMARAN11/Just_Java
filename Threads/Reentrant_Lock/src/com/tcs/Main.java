@@ -11,7 +11,7 @@ public class Main {
 
 		ReentrantLock reentrantLock = new ReentrantLock(true);
 
-		ExecutorService executorService = Executors.newFixedThreadPool(4);
+		ExecutorService executorService = Executors.newCachedThreadPool();
 
 		for (int i = 0; i <100; i++) {
 			executorService.execute(new WorkerThread("T"+i, reentrantLock));

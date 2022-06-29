@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -27,6 +28,12 @@ public class CallableIExample implements Callable<String>{
 
 	
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		
+		String s= "test";
+		
+		String s1 = Optional.ofNullable(s).orElse(Optional.of("Dumm").orElseThrow(NullPointerException::new));
+		
+		System.out.println(s1);
 		
 		
 		

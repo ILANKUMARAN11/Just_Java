@@ -1,4 +1,4 @@
-package com.tcs.infy;
+package com.tcs.infy.lenearDS;
 
 import java.util.Stack;
 

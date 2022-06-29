@@ -21,9 +21,16 @@ public class InsertionSorting {
 
 		}
 
-		for (int lst2 : arr) {
-			System.out.print(lst2 + " ");
+//		for (int lst2 : arr) {
+//			System.out.print(lst2 + " ");
+//		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
 		}
+		
+		
+		
 		
 	}
 
