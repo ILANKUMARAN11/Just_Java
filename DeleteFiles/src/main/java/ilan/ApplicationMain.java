@@ -1,7 +1,7 @@
 package ilan;
 
-import ilan.service.FileRename;
-import ilan.service.ReadFolder;
+import ilan.service.FileRenameService;
+import ilan.service.ReadFolderService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
@@ -21,8 +21,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ApplicationMain {
 
-    private final ReadFolder readFolder;
-    private final FileRename fileRename;
+    private final ReadFolderService readFolderService;
+    private final FileRenameService fileRenameService;
 
     public static void main(String[] args) throws IOException {
 
@@ -34,7 +34,7 @@ public class ApplicationMain {
     @Bean
     public CommandLineRunner startup() {
         return args -> {
-            readFolder.getFolderFiles(Boolean.TRUE)
+            readFolderService.getFolderFiles(Boolean.TRUE)
                     .entrySet()
                     .stream()
                     .forEach(e -> {
@@ -44,7 +44,7 @@ public class ApplicationMain {
                             File sourceFile = files.get(i).toFile();
                             String targetDestination = sourceFile.getParent();
 
-                            fileRename.renameFile(sourceFile.getAbsolutePath(), targetDestination, String.valueOf(i + 1), ".PNG");
+                            fileRenameService.renameFile(sourceFile, targetDestination, String.valueOf(i + 1), ".PNG");
                         }
                     });
         };

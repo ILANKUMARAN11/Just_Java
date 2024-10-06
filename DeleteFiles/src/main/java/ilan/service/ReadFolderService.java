@@ -8,7 +8,11 @@ import org.springframework.stereotype.Service;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -16,7 +20,7 @@ import static java.util.stream.Collectors.groupingBy;
 
 @Service
 @Slf4j
-public class ReadFolder {
+public class ReadFolderService {
 
     @Value("${root.folder::#{null}}")
     String rootFolder;
