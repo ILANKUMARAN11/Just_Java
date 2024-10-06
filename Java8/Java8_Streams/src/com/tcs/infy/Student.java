@@ -1,4 +1,4 @@
-package com.tcs.infy.streams;
+package com.tcs.infy;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -15,12 +15,15 @@ public class Student {
 	private int mark;
 
 	private String country;
+	
+	private String state;
 
-	Student(double id, String name, int mark, String country) {
+	public Student(double id, String name, int mark, String country, String state) {
 		this.id = id;
 		this.name = name;
 		this.mark = mark;
 		this.country = country;
+		this.state = state;
 	}
 
 	public Double getId() {
@@ -54,15 +57,27 @@ public class Student {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+	
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 
 	public String toString() {
-		return "ID : "+this.id + " , Name : " + this.name + " , Mark : " + this.mark+ " , Country : " + this.country;
+		return "ID : "+this.id + " , Name : " + this.name + " , Mark : " + this.mark+ " , Country : " + this.country+ " , state : " + this.state;
 	}
+	
+	
+
+	
 
 	public static void main(String ilan[]) {
 
-		List<Student> stuLst = Arrays.asList(new Student(9, "Ballon", 44, "US"), new Student(8, "Basu", 44, "CANADA"),
-				new Student(1, "BALA", 44, "CANADA"), new Student(5, "BABU", 33, "CANADA"), new Student(3, "SARA", 22, "CANADA"));
+		List<Student> stuLst = Arrays.asList(new Student(9, "Ballon", 44, "US", "A"), new Student(8, "Basu", 44, "CANADA", "A"),
+				new Student(1, "BALA", 44, "CANADA", "A"), new Student(5, "BABU", 33, "CANADA", "B"), new Student(3, "SARA", 22, "CANADA", "B"));
 
 		// 1st way of sorting
 		Comparator<Student> c = new Comparator<Student>() {
@@ -106,7 +121,33 @@ public class Student {
 		boolean match = stream.allMatch(s -> s.length() == 4);
 
 		System.out.println(match); // true
+		
+		System.out.println(stuLst
+				.stream()
+				.collect(Collectors.groupingBy(Student::getCountry,Collectors.groupingBy(Student::getState))));
 
+		
+		System.out.println(8%5);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }

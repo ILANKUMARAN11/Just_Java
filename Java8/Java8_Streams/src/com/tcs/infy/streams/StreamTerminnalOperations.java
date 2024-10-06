@@ -3,16 +3,20 @@ package com.tcs.infy.streams;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import com.tcs.infy.Student;
 
 public class StreamTerminnalOperations {
 
 	public static void main(String ilan[]) {
 
-		List<Student> stuLst = Arrays.asList(new Student(1, "Ballon", 44, "CANADA"),
-				new Student(2, "Basu", 44, "CANADA"), new Student(3, "BALA", 44, "CANADA"),
-				new Student(4, "BABU", 33, "CANADA"), new Student(5, "SURESH", 0, "CANADA"));
+		List<Student> stuLst = Arrays.asList(new Student(1, "Ballon", 44, "CANADA", "TN"),
+				new Student(1, "Ballon1", 44, "CANADA", "TN"),
+				new Student(2, "Basu", 44, "CANADA", "ANDRA"), new Student(3, "BALA", 44, "CANADA", "TN"),
+				new Student(4, "BABU", 33, "CANADA","TN"), new Student(5, "SURESH", 0, "CANADA", "TN"));
 
 		
 		
@@ -41,6 +45,9 @@ public class StreamTerminnalOperations {
 		System.out.println("findAny()===>>" + stuLst.stream().findAny().toString());
 		System.out.println("findFirst()===>>" + stuLst.stream().findFirst().toString());
 		System.out.println("collect()===>>" + stuLst.stream().collect(Collectors.toList()));
+		
+		
+		
 
 	}
 

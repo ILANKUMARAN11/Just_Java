@@ -1,18 +1,22 @@
 package com.tcs.infy.streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import com.tcs.infy.Student;
+
 public class GroupBy {
 
 	public static void main(String[] args) {
-		List<Student> stuLst = Arrays.asList(new Student(1, "ARUN", 44, "CHICAGO"),
-				new Student(2, "SARAVANAN", 44, "CANADA"), new Student(3, "ILAN", 44, "CANADA"),
-				new Student(4, "UMA", 33, "INDIA"), new Student(5, "SHILPA", 0, "INDIA"));
+		List<Student> stuLst = Arrays.asList(new Student(1, "Ballon", 44, "CANADA", "TN"),
+				new Student(1, "Ballon1", 44, "CANADA", "TN"),
+				new Student(2, "Basu", 44, "CANADA", "ANDRA"), new Student(3, "BALA", 44, "CANADA", "TN"),
+				new Student(4, "BABU", 33, "CANADA","TN"), new Student(5, "SURESH", 0, "CANADA", "TN"));
 
 		Map<String, List<Student>> mpGroup = stuLst.stream().
 				collect(Collectors.groupingBy(Student::getCountry));
@@ -37,6 +41,16 @@ public class GroupBy {
 		
 	
 
+		Map<String, Map<String,List<Student>>> ttt = stuLst
+				.stream()
+				.collect(Collectors.groupingBy(Student::getCountry, Collectors.groupingBy(Student::getState)));
+	
+		
+		stuLst
+		.stream()
+		.peek(e->System.out.println(">>###"))
+		.sorted(Comparator.comparing(Student::getId).reversed());
+		System.out.println("Grouping BY"+ttt);
 	}
 
 }
